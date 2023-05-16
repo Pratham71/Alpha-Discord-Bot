@@ -74,22 +74,6 @@ class AppCommands(commands.Cog):
         result = random.choice(flip)
         await interaction.response.send_message(f'It\'s {result}!')
     
-    @app_commands.command(name='roll_dice',description='Sends the user\'s information in a embed (sends own if user if left none!)')
-    @app_commands.guild_only()
-    async def roll_dice(self,interaction:discord.Interaction):
-        dice=[
-            'https://cdn.discordapp.com/attachments/1103884906146308178/1106532802557653003/pngwing.com.png',
-            'https://cdn.discordapp.com/attachments/1103884906146308178/1106532885239967784/pngwing.com_6.png',
-            'https://media.discordapp.net/attachments/1103884906146308178/1106532802087878717/pngwing.com_5.png?width=670&height=670',
-            'https://media.discordapp.net/attachments/1103884906146308178/1106532803501359204/pngwing.com_2.png?width=670&height=670',
-            'https://media.discordapp.net/attachments/1103884906146308178/1106532801697816677/pngwing.com_4.png?width=670&height=670',
-            'https://media.discordapp.net/attachments/1103884906146308178/1106532803098714112/pngwing.com_1.png?width=670&height=670'
-        ]
-        dice_roll=random.choice(dice)
-        dice_embed = discord.Embed(title='**Dice Roll**',color=discord.Color.random())
-        dice_embed.set_image(url=f'{dice_roll}')
-
-        await interaction.response.send_message(embed=dice_embed)
 
 async def setup(client):
     await client.add_cog(AppCommands(client))
