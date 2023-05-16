@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 
+your_user_id=
 
 class Get_Client_Guilds(commands.Cog):
     def __init__(self,client):
@@ -24,7 +25,7 @@ class Get_Client_Guilds(commands.Cog):
 
     @Get_Client_Guilds.error
     async def Get_Client_Guilds_Error(self,ctx,error):
-        if ctx.author.id != 397679536818487296:
+        if ctx.author.id != your_user_id:
             await ctx.reply(f'**Error: Your are forbiddened from using this command!!** \n __only the owner of this bot can use it__ ')
             
 async def setup(client):
