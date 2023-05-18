@@ -1,5 +1,6 @@
 import discord,random,pickle
 from discord.ext import commands
+your_user_id=
 
 class GuildHelp(commands.Cog):
   def __init__(self,client):
@@ -25,7 +26,7 @@ class GuildHelp(commands.Cog):
 
     @Leave.error
     async def leave_error(self,ctx,error):
-        if ctx.author.id != 397679536818487296:
+        if ctx.author.id != your_user_id:
             await ctx.reply(f'**Error: Your are forbiddened from using this command!! __only the owner of this bot can use it__**')
 
 async def setup(client):
