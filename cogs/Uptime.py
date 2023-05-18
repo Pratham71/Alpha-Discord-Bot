@@ -18,8 +18,8 @@ class Uptime(commands.Cog):
         time_embed = discord.Embed(title=f'**{self.client.user}\'s Uptime**',color=discord.Color.brand_green())
         time_embed.add_field(name='__Uptime:__',value=uptime)
         time_embed.set_footer(text=f'Requested by {ctx.author}',icon_url=ctx.author.avatar)
-
+        print(f'{ctx.author} used time in {ctx.channel.name,ctx.channel.id,ctx.guild.name,ctx.guild.id}')
         await ctx.send(embed=time_embed) 
-
+    
 async def setup(client):
     await client.add_cog(Uptime(client))

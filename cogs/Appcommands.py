@@ -1,6 +1,7 @@
-import discord,random
+import discord,random 
 from discord import app_commands
 from discord.ext import commands
+
 
 class AppCommands(commands.Cog):
     def __init__(self,client):
@@ -10,6 +11,8 @@ class AppCommands(commands.Cog):
     async def on_ready(self):
         await self.client.tree.sync()
         print('AppCommands.py is ready!')
+        
+        
     
     @app_commands.command(name='avatar',description='Sends the user\'s avatar in a embed (sends own if user is left none)')
     @app_commands.guild_only()
@@ -74,6 +77,5 @@ class AppCommands(commands.Cog):
         result = random.choice(flip)
         await interaction.response.send_message(f'It\'s {result}!')
     
-
 async def setup(client):
     await client.add_cog(AppCommands(client))

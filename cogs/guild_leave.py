@@ -1,11 +1,9 @@
 import discord,random,pickle
 from discord.ext import commands
 
-your_user_id=      #copy it from discord!
-
 class GuildHelp(commands.Cog):
-    def __init__(self,client):
-        self.client = client
+  def __init__(self,client):
+    self.client = client
 
     @commands.Cog.listener()
     async def on_ready(self):
@@ -19,14 +17,15 @@ class GuildHelp(commands.Cog):
         if guild is None:
             await ctx.reply('No guild with that name!')
             return
-
-        await ctx.reply(f'**I have left {guild_name}!**')
-        await guild.leave()
+        else:
+            await ctx.reply(f'**I have left {guild_name}!**')
+            await guild.leave()
+            
 
 
     @Leave.error
     async def leave_error(self,ctx,error):
-        if ctx.author.id != your_user_id:
+        if ctx.author.id != 397679536818487296:
             await ctx.reply(f'**Error: Your are forbiddened from using this command!! __only the owner of this bot can use it__**')
 
 async def setup(client):
