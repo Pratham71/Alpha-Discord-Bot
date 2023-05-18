@@ -13,6 +13,7 @@ please replace the following:
 4. your_user_id this with your user id in 'cogs/kill.py'
 5. your_user_id this with your user id in 'cogs/guild_leave.py'
 6. your_user_id this your user id in 'cogs/Get_Client_Guilds.py'
+7. your_user_id this your user id in 'cogs/Guild_Leave.py'
 only then this bot will work!
 
 
