@@ -21,4 +21,5 @@ NOTE-
 Setup a text channel named log-channel for auto logging to work!
 Events.py is autolog!
 
+Feel free to make a pull request or add new features!
 Thank you!
