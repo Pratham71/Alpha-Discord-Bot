@@ -10,7 +10,7 @@ class Get_Client_Guilds(commands.Cog):
     @commands.Cog.listener()
     async def on_ready(self):
         await self.client.tree.sync()
-        print('Get_Client_Guilds.py is ready!\n========(Cmd logging starts form here)========')
+        print('Get_Client_Guilds.py is ready!\n========(logging starts form here)========')
     
     @commands.command()
     @commands.is_owner()
