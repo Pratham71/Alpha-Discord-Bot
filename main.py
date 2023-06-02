@@ -13,7 +13,7 @@ c_prefix='.$'
 TOKEN=''
 client = commands.Bot(command_prefix=f'{c_prefix}',intents=discord.Intents.all())
 client.remove_command("help")
-bot_status = cycle([f'{c_prefix}help','Goenka Tech Fest','discord.py'])
+bot_status = cycle([f'{c_prefix}help','discord.py'])
 
 @client.event
 async def on_ready():
