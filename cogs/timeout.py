@@ -15,11 +15,11 @@ class TimeOut(commands.Cog):
     @commands.guild_only()
     @commands.has_permissions(moderate_members=True)
     @commands.bot_has_permissions(moderate_members=True)
-    async def timeout(self,ctx,member:discord.Member,minutes: int=0,days: int=0,reason=None):
+    async def timeout(self,ctx,member:discord.Member,minutes: int=0,reason=None):
         if ctx.author.id == member.id :
             await ctx.reply('**You cannot timeout yourself!**')
         
-        duration =  datetime.timedelta(minutes=minutes,days=days)
+        duration =  datetime.timedelta(minutes=minutes)
         timeout_embed = discord.Embed(title='**User Timedout!**',color=discord.Color.gold())
         timeout_embed.add_field(name='**Name of the member:**',value=f'{member.mention}',inline=False)
         timeout_embed.add_field(name='**User ID of the member:**',value=f'{member.id}',inline=False)
